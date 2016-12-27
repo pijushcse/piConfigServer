@@ -5,7 +5,11 @@ spring:
     config:
       server:
         git:
-          uri: file:///D://micro-poc/Example/Spring-Cloud-Config/config-repo
+          uri: https://github.com/pijushcse/config-repo
+          username: pijushcse
+          password: debcse04
+          searchPaths: '{application}'
+            
         
 server:
   port: 8888
@@ -14,3 +18,11 @@ security:
    user:
      name: debnatp
      password: picloud   
+   basic:
+    enabled: true
+    
+
+logging:
+  level:
+    org.springframework.boot: DEBUG
+    org.springframework.security: DEBUG
